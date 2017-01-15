@@ -1,26 +1,26 @@
-@font-face {
-  font-family: "MontserratBold";
-  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+@import "fonts";
+@import "variables";
+
+body {
+  font-family: $font-regular;
 }
-@font-face {
-  font-family: "MontserratRegular.ttf";
-  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
-}
+
 h2 {
-  font: 60px "MontserratBold", sans-serif;
+  font-family: $font-bold;
+  font-size: 60px;
 }
 h3 {
-  font: 92px "MontserratRegular", sans-serif;
+  font-size: 92px;
 }
 .red-word {
-  color: #ff343d;
+  color: $red-color;
 }
 h4 {
-  font: 30px "MontserratRegular", sans-serif;
+  font-size: 30px;
 }
 p {
-  font: 14px "MontserratRegular", sans-serif;
-  color: #92a1a5;
+  font-size: 14px;
+  color: $grey-color;
   line-height: 30px;
 }
 .container {
