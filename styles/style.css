@@ -35,4 +35,30 @@ p {
   background-size: cover;
   padding-bottom: 60px; }
 
+.nav {
+  float: right; }
+
+.buy-btn {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 36px; }
+
+.menu {
+  background: url("../images/menu.png") 50% no-repeat;
+  width: 24px;
+  height: 12px;
+  border: none; }
+
+.main-nav {
+  display: none; }
+
+.red-circle {
+  border-radius: 50%;
+  border: 3px solid;
+  color: #ff343d;
+  width: 11px;
+  height: 11px; }
+
 /*# sourceMappingURL=style.css.map */
