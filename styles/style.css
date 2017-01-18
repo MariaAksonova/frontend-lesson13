@@ -4,6 +4,15 @@
 @font-face {
   font-family: "MontserratRegular";
   src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+.main-btn {
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 40px;
+  border: none;
+  font-size: 18px;
+  font-family: "MontserratBold", sans-serif;
+  margin-top: 50px; }
+
 body {
   font-family: "MontserratRegular", sans-serif; }
 
@@ -12,7 +21,8 @@ h2 {
   font-size: 60px; }
 
 h3 {
-  font-size: 92px; }
+  font-size: 92px;
+  line-height: 102px; }
 
 .red-word {
   color: #ff343d; }
@@ -21,7 +31,7 @@ h4 {
   font-size: 30px; }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
   color: #92a1a5;
   line-height: 30px; }
 
@@ -30,10 +40,29 @@ p {
   margin: 0 auto; }
 
 .welcome {
-  background: url("../images/bg-top.png") 50% 50% no-repeat;
+  background: url("../images/bg-top.png") 100% no-repeat;
+  background-color: #eff2f6;
   min-height: 100vh;
-  background-size: cover;
-  padding-bottom: 60px; }
+  background-size: 45%;
+  padding-bottom: 60px;
+  position: relative;
+  box-sizing: border-box; }
+  .welcome .logo {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    margin-right: 60px; }
+  .welcome h4 {
+    font-size: 18px;
+    transform: rotate(270deg);
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+    cursor: pointer; }
+
+.main-header {
+  padding: 60px 0;
+  overflow: hidden; }
 
 .nav {
   float: right; }
@@ -54,11 +83,207 @@ p {
 .main-nav {
   display: none; }
 
+.logo {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  margin-right: 60px; }
+
 .red-circle {
   border-radius: 50%;
-  border: 3px solid;
+  border: 5px solid;
   color: #ff343d;
-  width: 11px;
-  height: 11px; }
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  display: inline-block; }
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0; } }
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative; }
+  .hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: 5px solid #ff343d;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1000; }
+  .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out; }
+
+.phone-number {
+  background: url("../images/phone.png") 8.5% no-repeat;
+  transition: 1s; }
+
+.phone-number:hover {
+  color: #ff343d; }
+
+.phantom {
+  position: absolute;
+  bottom: 190px;
+  right: 120px;
+  top: 190px; }
+
+.fly {
+  height: 614px; }
+  .fly ul li {
+    display: inline-block;
+    background-size: cover; }
+
+.tap-to-fly {
+  background: url("../images/bg-mid.png") no-repeat;
+  width: 33.3%; }
+
+.fly-higher {
+  background: url("../images/bg-mid1.png") no-repeat;
+  width: 66.3%; }
+
+.features {
+  padding: 124px 0;
+  text-align: center; }
+
+.features-list li {
+  padding-top: 290px;
+  width: 24%;
+  display: inline-block;
+  transition: 0.5s; }
+.features-list .technology {
+  background: url("../images/new-technology.png") 50% no-repeat; }
+.features-list .signal {
+  background: url("../images/good-signal.png") 50% no-repeat; }
+.features-list .use {
+  background: url("../images/easy-to-use.png") 50% no-repeat; }
+.features-list .visibility {
+  background: url("../images/visibility.png") 50% no-repeat; }
+
+.features-list li:hover {
+  transform: rotateZ(360deg); }
+
+.features-list li:hover h4 {
+  transform: rotateZ(0deg); }
+
+.products {
+  background: url("../images/drone.png") 100% 50% no-repeat;
+  padding: 340px 0 230px 0; }
+  .products h3 {
+    max-width: 749px; }
+  .products .main-btn {
+    border: 1px solid #eee; }
+  .products p {
+    display: none;
+    max-width: 749px;
+    margin-top: 50px; }
+
+.new-generation {
+  background: url("../images/bg-mid2.png") 50% 50% no-repeat;
+  background-size: cover;
+  padding: 190px 0; }
+  .new-generation h3 {
+    max-width: 749px;
+    margin-left: 54%;
+    color: #fff; }
+  .new-generation .main-btn {
+    color: #fff;
+    border: 1px solid #92a1a5;
+    background-color: transparent;
+    margin-left: 54%; }
+  .new-generation p {
+    display: none;
+    margin-left: 54%;
+    max-width: 749px;
+    margin-top: 50px; }
+
+.start-journey {
+  background: url("../images/bg-bottom.png") 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 776px 0 204px 0;
+  box-sizing: border-box; }
+  .start-journey h3 {
+    color: #fff; }
+  .start-journey .main-btn {
+    color: #318f76; }
+  .start-journey p {
+    display: none;
+    max-width: 749px;
+    margin: 50px auto 0; }
+
+footer {
+  padding: 230px 0;
+  text-align: center; }
+  footer p {
+    margin-top: 36px; }
+  footer a {
+    color: #92a1a5;
+    text-decoration: none; }
+  footer .logo {
+    position: relative;
+    text-decoration: none;
+    float: none; }
+
+@media (min-width: 1120px) and (max-width: 1240px) {
+  .container {
+    width: 1170px; }
+
+  h2 {
+    font-family: "MontserratBold", sans-serif;
+    font-size: 40px; }
+
+  h3 {
+    font-size: 72px;
+    line-height: 102px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px; }
+
+  h2 {
+    font-family: "MontserratBold", sans-serif;
+    font-size: 40px; }
+
+  h3 {
+    font-size: 62px;
+    line-height: 102px; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px; }
+
+  h2 {
+    font-family: "MontserratBold", sans-serif;
+    font-size: 32px; }
+
+  h3 {
+    font-size: 48px;
+    line-height: 102px; } }
+@media (max-width: 767px) {
+  .container {
+    width: auto;
+    padding: 0 28px; }
+
+  h2 {
+    font-family: "MontserratBold", sans-serif;
+    font-size: 32px; }
+
+  h3 {
+    font-size: 48px;
+    line-height: 102px; } }
 
 /*# sourceMappingURL=style.css.map */
