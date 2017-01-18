@@ -10,25 +10,31 @@ h2 {
   font-family: $font-bold;
   font-size: 60px;
 }
+
 h3 {
   font-size: 92px;
   line-height: 102px;
 }
+
 .red-word {
   color: $red-color;
 }
+
 h4 {
   font-size: 30px;
 }
+
 p {
   font-size: 18px;
   color: $grey-color;
   line-height: 30px;
 }
+
 .container {
   max-width: 1570px;
   margin: 0 auto;
 }
+
 @keyframes scroll-animation {
    0%, 100% {
      bottom: 100px;
@@ -37,18 +43,14 @@ p {
    50% {
      bottom: 110px;
    }
-
-   //100% {
-   //  margin-top: 0;
-   //}
  }
 
 .welcome {
-  background: url("../images/bg-top.png") 100% no-repeat;
+  background: url("../images/bg-top.png") 50% no-repeat;
   min-height: 100vh;
   padding-bottom: 60px;
-  position: relative;
   box-sizing: border-box;
+  background-size: cover;
 
   .logo {
     position: relative;
@@ -56,6 +58,7 @@ p {
     text-decoration: none;
     margin-right: 60px;
   }
+
   .scroll {
     font-size: 18px;
     transform: rotate(270deg);
@@ -69,35 +72,47 @@ p {
   }
 }
 
+.welcome>.container {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 .main-header {
   padding: 60px 0;
   overflow: hidden;
 }
+
 .nav {
   float: right;
 }
+
 .buy-btn {
   font-family: "MontserratBold", sans-serif;
   font-size: 16px;
   color: #fff;
   text-decoration: none;
   margin-right: 36px;
- }
+}
+
 .menu {
   background: url("../images/menu.png") 50% no-repeat;
   width: 24px;
   height: 12px;
   border: none;
 }
+
 .main-nav {
   display: none;
 }
+
 .logo {
   position: relative;
   float: left;
   text-decoration: none;
   margin-right: 60px;
 }
+
 .red-circle {
   border-radius: 50%;
   border: 5px solid;
@@ -156,30 +171,80 @@ p {
   color: $red-color;
 }
 
-//.phantom {
-//  position: absolute;
-//  bottom: 190px;
-//  right: 120px;
-//  top: 190px;
-//}
+.slider-dots {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+
+  li {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $grey-color;
+    margin-bottom: 14px;
+
+    &.active {
+      background: $red-color;
+    }
+  }
+}
 
 .slider-list {
+  position: absolute;
   width: 400px;
-  display: block;
+  left: 80px;
+  top: 36%;
+
+  li {
+    display: none;
+
+   &.active {
+      display: block;
+    }
+  }
 
   h2 {
     margin-bottom: 40px;
   }
 }
+
 .fly {
-  height: 614px;
-  background: url("../images/bg-mid1.png") no-repeat;
+  background: url("../images/bg-mid1.png") 50% no-repeat;
   background-size: cover;
 
+  p{
+    margin-top: 24px;
+  }
+
+  .main-btn {
+    transform: rotate(270deg);
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 1px;
+      background: #fff;
+      bottom: 50%;
+      right: 110%;
+    }
+  }
+
   ul {
-    li {
-      display: inline-block;
-      background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 614px;
+  }
+
+  .fly-higher {
+    width: 360px;
+
+    h2 {
+      color: #fff;
+      line-height: 72px;
     }
   }
 }
@@ -188,6 +253,7 @@ p {
   padding: 124px 0;
   text-align: center;
 }
+
 .features-list {
 
   li {
@@ -231,7 +297,6 @@ p {
     height: 91px;
   }
 }
-
 
 .products {
   background: url("../images/drone.png") 100% 50% no-repeat;
@@ -324,10 +389,12 @@ footer {
   .container {
     width: 1170px;
   }
+
   h2 {
     font-family: $font-bold;
     font-size: 40px;
   }
+
   h3 {
     font-size: 72px;
     line-height: 102px;
@@ -337,10 +404,12 @@ footer {
   .container {
     width: 970px;
   }
+
   h2 {
     font-family: $font-bold;
     font-size: 40px;
   }
+
   h3 {
     font-size: 62px;
     line-height: 102px;
@@ -352,10 +421,12 @@ footer {
   .container {
     width: 750px;
   }
+
   h2 {
     font-family: $font-bold;
     font-size: 32px;
   }
+
   h3 {
     font-size: 48px;
     line-height: 102px;
@@ -368,10 +439,12 @@ footer {
     width: auto;
     padding: 0 28px;
   }
+
   h2 {
     font-family: $font-bold;
     font-size: 32px;
   }
+
   h3 {
     font-size: 48px;
     line-height: 102px;

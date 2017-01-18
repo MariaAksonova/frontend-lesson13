@@ -11,5 +11,15 @@ $(function (){
         $('.start-journey p').fadeIn(1000);
         $('.start-journey h3').css('font-size','72px');
     });
-
+    $('.slider-dots .slide').on('click', function () {
+        var indexSlide = $(this).index();
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        $('.slider-list .slide.active').slideUp(300, function() {
+            $(this).removeClass('active');
+        });
+        $('.slider-list .slide').eq(indexSlide).slideDown(300, function() {
+            $(this).addClass('active');
+        });
+    });
 });
