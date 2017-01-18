@@ -39,11 +39,14 @@ p {
   max-width: 1570px;
   margin: 0 auto; }
 
+@keyframes scroll-animation {
+  0%, 100% {
+    bottom: 100px; }
+  50% {
+    bottom: 110px; } }
 .welcome {
   background: url("../images/bg-top.png") 100% no-repeat;
-  background-color: #eff2f6;
   min-height: 100vh;
-  background-size: 45%;
   padding-bottom: 60px;
   position: relative;
   box-sizing: border-box; }
@@ -52,13 +55,16 @@ p {
     float: left;
     text-decoration: none;
     margin-right: 60px; }
-  .welcome h4 {
+  .welcome .scroll {
     font-size: 18px;
     transform: rotate(270deg);
     position: absolute;
     left: 20px;
     bottom: 100px;
-    cursor: pointer; }
+    cursor: pointer;
+    animation-name: scroll-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; }
 
 .main-header {
   padding: 60px 0;
@@ -123,9 +129,8 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    animation-iteration-count: 1000; }
+    animation-iteration-count: infinite; }
   .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
     -webkit-animation-name: hvr-ripple-out;
     animation-name: hvr-ripple-out; }
@@ -137,49 +142,50 @@ p {
 .phone-number:hover {
   color: #ff343d; }
 
-.phantom {
-  position: absolute;
-  bottom: 190px;
-  right: 120px;
-  top: 190px; }
+.slider-list {
+  width: 400px;
+  display: block; }
+  .slider-list h2 {
+    margin-bottom: 40px; }
 
 .fly {
-  height: 614px; }
+  height: 614px;
+  background: url("../images/bg-mid1.png") no-repeat;
+  background-size: cover; }
   .fly ul li {
     display: inline-block;
     background-size: cover; }
-
-.tap-to-fly {
-  background: url("../images/bg-mid.png") no-repeat;
-  width: 33.3%; }
-
-.fly-higher {
-  background: url("../images/bg-mid1.png") no-repeat;
-  width: 66.3%; }
 
 .features {
   padding: 124px 0;
   text-align: center; }
 
 .features-list li {
-  padding-top: 290px;
   width: 24%;
-  display: inline-block;
-  transition: 0.5s; }
-.features-list .technology {
-  background: url("../images/new-technology.png") 50% no-repeat; }
-.features-list .signal {
-  background: url("../images/good-signal.png") 50% no-repeat; }
-.features-list .use {
-  background: url("../images/easy-to-use.png") 50% no-repeat; }
-.features-list .visibility {
-  background: url("../images/visibility.png") 50% no-repeat; }
-
-.features-list li:hover {
-  transform: rotateZ(360deg); }
-
-.features-list li:hover h4 {
-  transform: rotateZ(0deg); }
+  display: inline-block; }
+  .features-list li:before {
+    content: '';
+    display: block;
+    margin: 100px auto 80px;
+    transition: 0.5s; }
+  .features-list li:hover:before {
+    transform: rotateZ(360deg); }
+.features-list .technology:before {
+  background: url("../images/new-technology.png") 50% no-repeat;
+  width: 91px;
+  height: 91px; }
+.features-list .signal:before {
+  background: url("../images/good-signal.png") 50% no-repeat;
+  width: 62px;
+  height: 87px; }
+.features-list .use:before {
+  background: url("../images/easy-to-use.png") 50% no-repeat;
+  width: 91px;
+  height: 91px; }
+.features-list .visibility:before {
+  background: url("../images/visibility.png") 50% no-repeat;
+  width: 91px;
+  height: 91px; }
 
 .products {
   background: url("../images/drone.png") 100% 50% no-repeat;
