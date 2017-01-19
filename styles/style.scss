@@ -257,7 +257,6 @@ p {
 .features-list {
 
   li {
-    //padding-top: 290px;
     width: 24%;
     display: inline-block;
 
@@ -391,13 +390,12 @@ footer {
   }
 
   h2 {
-    font-family: $font-bold;
     font-size: 40px;
   }
 
   h3 {
     font-size: 72px;
-    line-height: 102px;
+    line-height: 82px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -406,13 +404,12 @@ footer {
   }
 
   h2 {
-    font-family: $font-bold;
     font-size: 40px;
   }
 
   h3 {
     font-size: 62px;
-    line-height: 102px;
+    line-height: 72px;
   }
 
 }
@@ -423,13 +420,20 @@ footer {
   }
 
   h2 {
-    font-family: $font-bold;
     font-size: 32px;
   }
 
   h3 {
     font-size: 48px;
-    line-height: 102px;
+    line-height: 52px;
+  }
+
+  .features-list {
+
+    li {
+      width: 33%;
+      display: inline-block;
+    }
   }
 
 
@@ -441,13 +445,73 @@ footer {
   }
 
   h2 {
-    font-family: $font-bold;
     font-size: 32px;
+    line-height: 38px;
+    max-width: 300px;
   }
 
   h3 {
     font-size: 48px;
-    line-height: 102px;
+    line-height: 52px;
+    max-width: 300px;
+  }
+
+  p {
+    max-width: 300px;
+  }
+
+  .welcome .logo {
+    margin-right: 21px;
+  }
+
+  .phone-number {
+    background: url(../images/phone.png) 35.5% no-repeat;
+  }
+
+  .new-generation {
+
+    h3 {
+      margin-left: 0;
+    }
+
+    .main-btn {
+      margin-left: 0;
+    }
+
+    p {
+      margin-left: 0;
+    }
+  }
+
+  .features-list {
+
+    li {
+      width: 90%;
+      display: inline-block;
+    }
+  }
+
+  .slider-list {
+    width: 300px;
+  }
+
+  .fly {
+
+    .main-btn {
+      transform: rotate(0deg);
+
+      &:after {
+        display: none;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 580px;
+      color: #fff;
+    }
   }
 }
 
