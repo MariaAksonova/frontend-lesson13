@@ -173,13 +173,13 @@ p {
     margin-bottom: 40px; }
 
 .fly {
-  background: url("../images/bg-mid1.png") 50% no-repeat;
-  background-size: cover; }
+  display: flex; }
   .fly p {
     margin-top: 24px; }
   .fly .main-btn {
     transform: rotate(270deg);
-    position: relative; }
+    position: relative;
+    margin-top: 0; }
     .fly .main-btn:after {
       content: '';
       position: absolute;
@@ -189,16 +189,35 @@ p {
       background: #fff;
       bottom: 50%;
       right: 110%; }
-  .fly ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 614px; }
+  .fly .tap-to-fly {
+    background: url("../images/bg-midpart1.png") no-repeat;
+    width: 33%;
+    padding: 200px 0; }
   .fly .fly-higher {
-    width: 360px; }
+    background: url("../images/bg-midpart2.png") no-repeat;
+    background-size: cover;
+    width: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative; }
     .fly .fly-higher h2 {
       color: #fff;
-      line-height: 72px; }
+      line-height: 72px;
+      z-index: 10;
+      margin-left: 50px; }
+
+.black-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  background: black;
+  opacity: 0.65;
+  top: 0;
+  left: 0; }
 
 .features {
   padding: 124px 0;
@@ -331,7 +350,8 @@ footer {
 
   h2 {
     font-size: 32px;
-    line-height: 38px; }
+    line-height: 38px;
+    max-width: 300px; }
 
   h3 {
     font-size: 48px;
